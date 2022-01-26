@@ -30,6 +30,7 @@ class EmployeeComponent extends React.Component {
     }
 }
 
+export default EmployeeComponent;
 
 // const EmployeeComponent = (props) => {
 //     var emp = props.empList.map((x) => {
@@ -54,4 +55,3 @@ class EmployeeComponent extends React.Component {
 //     window.open('https://getbootstrap.com/docs/5.1/components/card/', '_blank');
 // }
 
-export default EmployeeComponent;
