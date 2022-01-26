@@ -1,17 +1,10 @@
 import React from 'react';
-
-
-
-class SearchBar extends React.Component {
-    state = { term: 'Hi There !s' }
-    // constructor(props) {
-    //     super(props);
-    // }
+class SearchBarComponent extends React.Component {
+    state = { term: 'Hi There !s', isLogin: 1 }
 
     render() {
         return (
             <div>
-
                 <form onSubmit={this.onSubmitForm}>
                     <div className="row align-items-center justify-content-center bg-warning">
                         <div className="col-6">
@@ -23,22 +16,26 @@ class SearchBar extends React.Component {
                         </div>
                     </div>
                 </form>
+                {this.state.isLogin === 1 ? (
+                    <div>heya this is conditional rendering</div>
+                ) : (
+                    <div className='btn btn-primary'>world</div>
+                )}
             </div>
         );
     }
 
     onSubmitForm = (event) => {
         event.preventDefault();
-        // console.log("Form value is : ");
-        // console.log(this.state.term);
         this.props.onSubmitTermCallback(this.state.term);
         console.log(this.props.testaaa);
     }
 
     onChangeText = (event) => {
-        this.setState({ ...this.state.term, term: event.target.value });
+        debugger;
+        this.setState({ term: event.target.value });
         console.log(this.state.term);
     }
 }
 
-export default SearchBar;
+export default SearchBarComponent;

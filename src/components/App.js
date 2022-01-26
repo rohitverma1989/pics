@@ -1,7 +1,8 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import EmployeeComponent from './Employee'
 
-class App extends React.Component {
+class AppComponent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -10,13 +11,18 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className='container-fluid text-center bg-info'>
+            <div className='container-fluid text-center'>
                 <div className='row'>
                     <div className='col'>
                         <h1>
                             {this.state.title}
-                            <SearchBar testaaa='ss' onSubmitTermCallback={this.onGetTerm}></SearchBar>
                         </h1>
+                        <SearchBar testaaa='ss' onSubmitTermCallback={this.onGetTerm}></SearchBar>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col-12'>
+                        <EmployeeComponent></EmployeeComponent>
                     </div>
                 </div>
 
@@ -24,11 +30,11 @@ class App extends React.Component {
         );
     }
 
-    onGetTerm(term){
+    onGetTerm(term) {
         console.log(term);
     }
 }
-export default App;
+export default AppComponent;
 
 // const Asks = (props) => {
 //     return (
