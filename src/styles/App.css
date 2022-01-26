@@ -1,8 +1,12 @@
 .card-shadow {
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 10px 20px 30px 40px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .card-shadow:hover {
-    transform: translateY(-3px);
+    transform: translate(0.3px, -3px);
+}
+
+.body-background {
+    /* background-color: #3E3D32 */
 }

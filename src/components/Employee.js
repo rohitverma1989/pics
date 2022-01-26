@@ -6,7 +6,11 @@ class EmployeeComponent extends React.Component {
         employeeList: [
             { name: 'Rohit', title: 'Software Engineer' },
             { name: 'Rivanya', title: 'Kiddo' },
-            { name: 'Saurabh', title: 'Software Engineer' }
+            { name: 'Saurabh', title: 'Software Engineer' },
+            { name: 'Saurabh', title: 'Software Engineer' },
+            { name: 'Saurabh', title: 'Software Engineer' },
+            { name: 'Saurabh', title: 'Software Engineer' },
+            { name: 'Saurabh', title: 'Software Engineer' },
         ]
     }
 
