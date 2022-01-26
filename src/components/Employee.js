@@ -3,10 +3,8 @@ import '../styles/App.css'
 
 class EmployeeComponent extends React.Component {
     empList = [];
-
     render() {
         this.empList = this.props.empList;
-
         var emp = this.empList.map((x) => {
             return (
                 <div className='col-6 my-1'>
@@ -29,7 +27,6 @@ class EmployeeComponent extends React.Component {
         window.open('https://getbootstrap.com/docs/5.1/components/card/', '_blank');
     }
 }
-
 export default EmployeeComponent;
 
 // const EmployeeComponent = (props) => {
