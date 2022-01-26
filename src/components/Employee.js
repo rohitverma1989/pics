@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/App.css'
+
 class EmployeeComponent extends React.Component {
     state = {
         employeeList: [
@@ -13,7 +15,7 @@ class EmployeeComponent extends React.Component {
         var emp = this.state.employeeList.map((x) => {
             return (
                 <div className='col-6 my-1'>
-                    <div className="card bg-dark text-light">
+                    <div className="card bg-dark text-light card-shadow">
                         <div className="card-header">
                             {x.name}
                         </div>
