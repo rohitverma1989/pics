@@ -1,12 +1,13 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import EmployeeComponent from './Employee'
+import axios from 'axios';
 
 class AppComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { title: 'App Component' }
+        this.state = { title: 'App Component', searchTerm: "", empList: [] }
     }
 
     render() {
@@ -22,7 +23,7 @@ class AppComponent extends React.Component {
                 </div>
                 <div className='row'>
                     <div className='col-12'>
-                        <EmployeeComponent></EmployeeComponent>
+                        <EmployeeComponent empList={this.state.empList}></EmployeeComponent>
                     </div>
                 </div>
 
@@ -30,8 +31,24 @@ class AppComponent extends React.Component {
         );
     }
 
-    onGetTerm(term) {
+    onGetTerm = (term) => {
         console.log(term);
+        this.setState({ searchTerm: term });
+        this.getEmployees();
+    }
+
+    getEmployees = () => {
+        axios.get("http://localhost:5510/api/employee/GetEmployeeList").then(
+            (response) => {
+                console.log("response from web api ");
+                console.log(response);
+                this.setState({ empList: response.data });
+            },
+            (error) => {
+                console.log("error in getting data from api");
+                console.log(error);
+            }
+        )
     }
 }
 export default AppComponent;
