@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import EmployeeComponent from './Employee'
-import axios from 'axios';
 
 class AppComponent extends React.Component {
 
@@ -59,10 +58,3 @@ class AppComponent extends React.Component {
     }
 }
 export default AppComponent;
-
-// const Asks = (props) => {
-//     return (
-//         <div>he this is good </div>
-//     )
-// }
-// export default Asks;

@@ -9,6 +9,10 @@
     transform: translate(0.3px, -3px);
 }
 
+.card-shadow:not(:hover){
+    transform: translate(-0.3px, 3px);
+}
+
 .body-background {
     /* background-color: #3E3D32 */
 }
