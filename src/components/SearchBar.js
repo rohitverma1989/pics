@@ -17,7 +17,7 @@ class SearchBarComponent extends React.Component {
                     </div>
                 </form>
                 {this.state.isLogin === 1 ? (
-                    <div>heya this is conditional rendering</div>
+                    <div>Hellow this is conditional rendering</div>
                 ) : (
                     <div className='btn btn-primary'>world</div>
                 )}
